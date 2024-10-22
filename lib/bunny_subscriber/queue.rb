@@ -45,6 +45,7 @@ module BunnySubscriber
       end
 
 
+      puts "consuming queue => QUEUE: #{consumer.subscriber_options[:queue_name]}, OPTIONS: #{options}"
       channel.queue(
         consumer.subscriber_options[:queue_name], options
       )
